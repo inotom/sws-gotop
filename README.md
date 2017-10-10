@@ -30,21 +30,22 @@ Set element's style etc... with data attribute.
 
 ## Data attributes
 
-| attribute name                | content                                    |  defaults |
-|:------------------------------|:-------------------------------------------|:----------|
-| `data-sws-gotop-size`         | Vartical and horizontal size               | `50`      |
-| `data-sws-gotop-right`        | Position from the right edge of the window | `50px`    |
-| `data-sws-gotop-bottom`       | Position from the bottom of window         | `100px`   |
-| `data-sws-gotop-bottom-gap`   | Distance to slide up from the bottom       | `0px`     |
-| `data-sws-gotop-z-index`      | Value of z-index                           | `1000`    |
-| `data-sws-gotop-bg-color`     | Background color                           | `#ffc966` |
-| `data-sws-gotop-fg-color`     | Foreground color                           | `#ffffff` |
-| `data-sws-gotop-opacity`      | Transparency with mouse over               | `1`       |
-| `data-sws-gotop-radius`       | Border radius size                         | `50%`     |
-| `data-sws-gotop-weight`       | Thickness of the arrow                     | `normal`  |
-| `data-sws-gotop-boundary`     | Scroll potision to start display           | `200`     |
-| `data-sws-gotop-mobile-width` | Mobile device judgment width               | `640`     |
-| `data-sws-gotop-src`          | Image path                                 | `null`    |
+| attribute name                | content                                    |  defaults                 |
+|:------------------------------|:-------------------------------------------|:--------------------------|
+| `data-sws-gotop-size`         | Vartical and horizontal size               | `50`                      |
+| `data-sws-gotop-right`        | Position from the right edge of the window | `50px`                    |
+| `data-sws-gotop-bottom`       | Position from the bottom of window         | `100px`                   |
+| `data-sws-gotop-bottom-gap`   | Distance to slide up from the bottom       | `0px`                     |
+| `data-sws-gotop-z-index`      | Value of z-index                           | `1000`                    |
+| `data-sws-gotop-bg-color`     | Background color                           | `#ffc966`                 |
+| `data-sws-gotop-fg-color`     | Foreground color                           | `#ffffff`                 |
+| `data-sws-gotop-opacity`      | Transparency with mouse over               | `1`                       |
+| `data-sws-gotop-radius`       | Border radius size                         | `50%`                     |
+| `data-sws-gotop-weight`       | Thickness of the arrow                     | `normal`                  |
+| `data-sws-gotop-ripple-color` | Ripple effect color                        | `rgba(255, 255, 255, .5)` |
+| `data-sws-gotop-boundary`     | Scroll potision to start display           | `200`                     |
+| `data-sws-gotop-mobile-width` | Mobile device judgment width               | `640`                     |
+| `data-sws-gotop-src`          | Image path                                 | `null`                    |
 
 ## License
 

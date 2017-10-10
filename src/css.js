@@ -1,5 +1,6 @@
 import existy from 'swsutils/src/existy';
 import attr from './attr.js';
+import ripple from './ripple.js';
 
 const makeBgImage = (weight, fgColor, image) => {
   if (existy(image)) {
@@ -13,8 +14,7 @@ const makeBgImage = (weight, fgColor, image) => {
 };
 
 
-export default (el) => {
-  let size      = attr(el, 'data-sws-gotop-size', 50);
+export default (el, size, image) => {
   let right     = attr(el, 'data-sws-gotop-right', '50px');
   let bottom    = attr(el, 'data-sws-gotop-bottom', '100px');
   let bottomGap = attr(el, 'data-sws-gotop-bottom-gap', '0px');
@@ -24,7 +24,12 @@ export default (el) => {
   let opacity   = attr(el, 'data-sws-gotop-opacity', 1);
   let radius    = attr(el, 'data-sws-gotop-radius', '50%');
   let weight    = attr(el, 'data-sws-gotop-weight', 'normal');
-  let image     = attr(el, 'data-sws-gotop-src', null);
+  let rippleBg  = attr(el, 'data-sws-gotop-ripple-color', 'rgba(255, 255, 255, .5)');
+
+  // add ripple layer
+  if (!existy(image)) {
+    ripple(el);
+  }
 
   // add style.
   let bgSize = existy(image) ? '100%' : '70%';
@@ -50,13 +55,35 @@ export default (el) => {
   transition: none .2s ease-out 0s;
   transition-property: opacity, bottom;
 }
-#sws-gotop.is-active {
+#sws-gotop.is-sws-gotop-active {
   bottom: ${bottom};
   z-index: ${zIndex};
   opacity: 1;
 }
-#sws-gotop.is-active:hover {
+#sws-gotop.is-sws-gotop-active:hover {
   opacity: ${opacity};
+}
+#sws-gotop .sws-gotop-ripple {
+  position: absolute;
+  width: ${size * 2}px;
+  height: ${size * 2}px;
+  background-color: ${rippleBg};
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+#sws-gotop .sws-gotop-ripple.is-sws-gotop-ripple-animate {
+  animation: sws-gotop-ripple-animation .75s ease-out;
+}
+@keyframes sws-gotop-ripple-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 `;
 };
