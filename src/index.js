@@ -16,9 +16,12 @@ export default () => {
     let image    = attr(elSwsGotop, 'data-sws-gotop-src', null);
 
     // add style.
-    let elStyle = document.createElement('STYLE');
-    elStyle.textContent = css(elSwsGotop, size, image);
-    document.head.appendChild(elStyle);
+    if (!existy(document.getElementById('sws-gotop-style'))) {
+      let elStyle = document.createElement('STYLE');
+      elStyle.id = 'sws-gotop-style';
+      elStyle.textContent = css(elSwsGotop, size, image);
+      document.head.appendChild(elStyle);
+    }
 
     // scroll to top by click event.
     const elRipple = elSwsGotop.querySelector('.sws-gotop-ripple');
