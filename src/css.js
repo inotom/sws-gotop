@@ -1,6 +1,6 @@
-import existy from 'swsutils/src/existy';
-import attr from './attr.js';
-import ripple from './ripple.js';
+const existy = require('swsutils/src/existy');
+const attr = require('./attr.js');
+const ripple = require('./ripple.js');
 
 const makeBgImage = (weight, fgColor, image) => {
   if (existy(image)) {
@@ -14,7 +14,7 @@ const makeBgImage = (weight, fgColor, image) => {
 };
 
 
-export default (el, size, image) => {
+module.exports = (el, size, image) => {
   let right     = attr(el, 'data-sws-gotop-right', '50px');
   let bottom    = attr(el, 'data-sws-gotop-bottom', '100px');
   let bottomGap = attr(el, 'data-sws-gotop-bottom-gap', '0px');

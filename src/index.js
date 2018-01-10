@@ -1,12 +1,12 @@
-import existy from 'swsutils/src/existy';
-import attr from './attr.js';
-import css from './css.js';
-import scroll from './scroll.js';
-import display from './display.js';
+const existy = require('swsutils/src/existy');
+const attr = require('./attr.js');
+const css = require('./css.js');
+const scroll = require('./scroll.js');
+const display = require('./display.js');
 
 const KEY_ENTER = 13;
 
-export default () => {
+module.exports = () => {
 
   const elSwsGotop = document.getElementById('sws-gotop');
 

@@ -1,6 +1,6 @@
-import existy from 'swsutils/src/existy';
+const existy = require('swsutils/src/existy');
 
-export default (el, key, orig) => {
+module.exports = (el, key, orig) => {
   if (existy(el) && el.hasAttribute(key)) {
     return el.getAttribute(key);
   }

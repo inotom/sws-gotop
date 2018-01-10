@@ -1,4 +1,4 @@
-import attr from './attr.js';
+const attr = require('./attr.js');
 
 const isMobile = (el) => {
   let width  = attr(el, 'data-sws-gotop-mobile-width', 640);
@@ -8,7 +8,7 @@ const isMobile = (el) => {
   return window.matchMedia('(max-width: ' + width + 'px)').matches;
 };
 
-export default (el) => {
+module.exports = (el) => {
   let display = 'block';
   if (isMobile(el)) {
     display = 'none';

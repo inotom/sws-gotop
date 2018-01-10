@@ -27,4 +27,4 @@ const scroll = () => {
   scrollTo(from, to);
 };
 
-export default scroll;
+module.exports = scroll;
