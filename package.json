@@ -1,8 +1,8 @@
 {
   "name": "sws-gotop",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Scroll to top button",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "config": {
     "dist_dir": "dist",
     "src_dir": "src",
@@ -12,9 +12,10 @@
   "scripts": {
     "start": "npm run server & npm run watch",
     "server": "browser-sync start --server $npm_package_config_dist_dir --files \"$npm_package_config_dist_dir/**/*\" --no-open",
-    "build": "npm run clean && npm run lint && npm run build:prod",
+    "build": "npm run clean && npm run lint && npm run build:prod && npm run prepare",
     "build:dev": "NODE_ENV=development browserify --debug $npm_package_config_js_src -t babelify -o $npm_package_config_js_out",
     "build:prod": "NODE_ENV=production browserify $npm_package_config_js_src -t babelify | uglifyjs -m -c --comments | insertcopy >$npm_package_config_js_out",
+    "prepare": "babel src --out-dir lib",
     "clean": "rimraf '**/.DS_Store' & rimraf $npm_package_config_js_out",
     "watch": "NODE_ENV=development watchify --debug -t babelify $npm_package_config_js_src -o $npm_package_config_js_out -v",
     "lint": "eslint $npm_package_config_src_dir/js",
@@ -32,6 +33,7 @@
   },
   "homepage": "https://github.com/inotom/sws-gotop#readme",
   "devDependencies": {
+    "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.1",
     "babel-preset-env": "1.6.1",
