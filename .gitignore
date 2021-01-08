@@ -2,5 +2,6 @@
 *.swp
 *~
 *.log
-*.lock
-node_modules
+/node_modules
+/dist
+.node-version
