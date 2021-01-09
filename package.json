@@ -1,6 +1,6 @@
 {
   "name": "@inotom/sws-gotop",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -9,9 +9,8 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "keywords": [
-  ],
-  "author": "inotom <wdf7322@yahoo.co.jp> (https://www.serendip.ws/)",
+  "keywords": [],
+  "author": "inotom (https://www.serendip.ws/)",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development rollup -c -w",
@@ -61,6 +60,7 @@
   "dependencies": {
     "@inotom/smoothscroll": "2.0.0",
     "lit-element": "2.4.0",
-    "throttle-debounce": "3.0.1"
+    "throttle-debounce": "3.0.1",
+    "tslib": "2.1.0"
   }
 }
