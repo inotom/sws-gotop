@@ -31,6 +31,7 @@ const updateGotop = (
   if (window.matchMedia(mediaQuery).matches) {
     elGotop.setAttribute('aria-hidden', 'true');
     elGotop.setAttribute('disabled', '');
+    elGotop.removeAttribute('is-moving');
     return;
   }
 
@@ -39,6 +40,7 @@ const updateGotop = (
   if (nextState && !elGotop.hasAttribute('disabled')) {
     elGotop.setAttribute('aria-hidden', 'true');
     elGotop.setAttribute('disabled', '');
+    elGotop.removeAttribute('is-moving');
   } else if (!nextState && elGotop.hasAttribute('disabled')) {
     elGotop.setAttribute('aria-hidden', 'false');
     elGotop.removeAttribute('disabled');
@@ -212,6 +214,10 @@ class SwsGotop extends LitElement {
       return;
     }
 
+    if (elGotop.hasAttribute('is-moving')) {
+      return;
+    }
+
     const rectRoot = elGotop.getBoundingClientRect();
     const size = rectRoot.width;
 
@@ -229,6 +235,7 @@ class SwsGotop extends LitElement {
     const from =
       window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     scrollTo(from, 0);
+    elGotop.setAttribute('is-moving', '');
   }
 }
 
