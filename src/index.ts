@@ -56,6 +56,7 @@ class SwsGotop extends LitElement {
       --sws-gotop-bottom: 100px;
       --sws-gotop-z-index: 1000;
       --sws-gotop-transition: opacity 0.3s, transform 0.3s;
+      --sws-gotop-transform: translate3d(0, 50px, 0);
       --sws-gotop-fg-color: #fff;
       --sws-gotop-bg-color: #933;
       --sws-gotop-hover-opacity: 1;
@@ -113,7 +114,7 @@ class SwsGotop extends LitElement {
     .gotop[aria-hidden='true'] {
       pointer-events: none;
       opacity: 0;
-      transform: translateY(50px);
+      transform: var(--sws-gotop-transform);
     }
 
     .gotop__ripple {

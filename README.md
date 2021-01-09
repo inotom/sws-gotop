@@ -20,6 +20,7 @@ sws-gotop {
   --sws-gotop-bottom: 100px;
   --sws-gotop-z-index: 1000;
   --sws-gotop-transition: opacity 0.3s, transform 0.3s;
+  --sws-gotop-transform: translate3d(0, 50px, 0);
   --sws-gotop-fg-color: #fff;
   --sws-gotop-bg-color: #933;
   --sws-gotop-hover-opacity: 1;
@@ -42,6 +43,7 @@ sws-gotop {
 | `--sws-gotop-bottom`        | Position from the bottom of window         | `100px`                          |
 | `--sws-gotop-z-index`       | Value of z-index                           | `1000`                           |
 | `--sws-gotop-transition`    | Show in transition                         | `opacity 0.3s, transform 0.3s`   |
+| `--sws-gotop-transform`     | Move button position before show in        | `translate3d(0, 50px, 0)`        |
 | `--sws-gotop-fg-color`      | Foreground color                           | `#fff`                           |
 | `--sws-gotop-bg-color`      | Background color                           | `#933`                           |
 | `--sws-gotop-hover-opacity` | Transparency with mouse over               | `1`                              |
