@@ -2,6 +2,10 @@
 
 A web components to display the button to scroll to the top of the page.
 
+## Demo
+
+[Demo](http://sandbox.serendip.ws/sws-gotop.html)
+
 ## Usage
 
 Place `sws-gotop` custom element.
