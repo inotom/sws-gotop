@@ -35,29 +35,31 @@ sws-gotop {
   --sws-gotop-arrow-color: #fff;
   --sws-gotop-arrow-weight: 2px;
   --sws-gotop-arrow-scale: 1;
+  --sws-gotop-pointer-focus-outline-width: 0;
 }
 ```
 
 ## CSS custom properties
 
-| css custom property name    | content                                    |  defaults                        |
-|:----------------------------|:-------------------------------------------|:---------------------------------|
-| `--sws-gotop-size`          | Vartical and horizontal size               | `80px`                           |
-| `--sws-gotop-right`         | Position from the right edge of the window | `50px`                           |
-| `--sws-gotop-bottom`        | Position from the bottom of window         | `100px`                          |
-| `--sws-gotop-z-index`       | Value of z-index                           | `1000`                           |
-| `--sws-gotop-transition`    | Show in transition                         | `opacity 0.3s, transform 0.3s`   |
-| `--sws-gotop-transform`     | Move button position before show in        | `translate3d(0, 50px, 0)`        |
-| `--sws-gotop-fg-color`      | Foreground color                           | `#fff`                           |
-| `--sws-gotop-bg-color`      | Background color                           | `#933`                           |
-| `--sws-gotop-hover-opacity` | Transparency with mouse over               | `1`                              |
-| `--sws-gotop-border-radius` | Border radius size                         | `50%`                            |
-| `--sws-gotop-border`        | Border style                               | `0 none`                         |
-| `--sws-gotop-shadow`        | Button shadow style                        | `2px 2px 5px rgba(0, 0, 0, 0.2)` |
-| `--sws-gotop-ripple-color`  | Ripple effect color                        | `rgba(255, 255, 255, 0.5)`       |
-| `--sws-gotop-arrow-color`   | Arrow color                                | `#fff`                           |
-| `--sws-gotop-arrow-weight`  | Thickness of the arrow                     | `2px`                            |
-| `--sws-gotop-arrow-scale`   | Scale size of the arrow                    | `1`                              |
+| css custom property name                  | content                                    |  defaults                        |
+|:------------------------------------------|:-------------------------------------------|:---------------------------------|
+| `--sws-gotop-size`                        | Vartical and horizontal size               | `80px`                           |
+| `--sws-gotop-right`                       | Position from the right edge of the window | `50px`                           |
+| `--sws-gotop-bottom`                      | Position from the bottom of window         | `100px`                          |
+| `--sws-gotop-z-index`                     | Value of z-index                           | `1000`                           |
+| `--sws-gotop-transition`                  | Show in transition                         | `opacity 0.3s, transform 0.3s`   |
+| `--sws-gotop-transform`                   | Move button position before show in        | `translate3d(0, 50px, 0)`        |
+| `--sws-gotop-fg-color`                    | Foreground color                           | `#fff`                           |
+| `--sws-gotop-bg-color`                    | Background color                           | `#933`                           |
+| `--sws-gotop-hover-opacity`               | Transparency with mouse over               | `1`                              |
+| `--sws-gotop-border-radius`               | Border radius size                         | `50%`                            |
+| `--sws-gotop-border`                      | Border style                               | `0 none`                         |
+| `--sws-gotop-shadow`                      | Button shadow style                        | `2px 2px 5px rgba(0, 0, 0, 0.2)` |
+| `--sws-gotop-ripple-color`                | Ripple effect color                        | `rgba(255, 255, 255, 0.5)`       |
+| `--sws-gotop-arrow-color`                 | Arrow color                                | `#fff`                           |
+| `--sws-gotop-arrow-weight`                | Thickness of the arrow                     | `2px`                            |
+| `--sws-gotop-arrow-scale`                 | Scale size of the arrow                    | `1`                              |
+| `--sws-gotop-pointer-focus-outline-width` | Mouse pointer Fouced outline width         | `0`                              |
 
 ## Options
 

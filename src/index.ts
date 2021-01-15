@@ -67,6 +67,7 @@ class SwsGotop extends LitElement {
       --sws-gotop-arrow-color: #fff;
       --sws-gotop-arrow-weight: 2px;
       --sws-gotop-arrow-scale: 1;
+      --sws-gotop-pointer-focus-outline-width: 0;
     }
 
     .gotop {
@@ -90,6 +91,10 @@ class SwsGotop extends LitElement {
 
     .gotop:hover {
       opacity: var(--sws-gotop-hover-opacity);
+    }
+
+    .gotop:focus:not(:focus-visible) {
+      outline-width: var(--sws-gotop-pointer-focus-outline-width);
     }
 
     .gotop svg {
