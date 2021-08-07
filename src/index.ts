@@ -68,6 +68,7 @@ class SwsGotop extends LitElement {
       --sws-gotop-arrow-weight: 2px;
       --sws-gotop-arrow-scale: 1;
       --sws-gotop-pointer-focus-outline-width: 0;
+      --sws-gotop-svg-max-width: 100%;
     }
 
     .gotop {
@@ -99,7 +100,7 @@ class SwsGotop extends LitElement {
 
     .gotop svg {
       transform: scale(var(--sws-gotop-arrow-scale));
-      max-width: 100%;
+      max-width: var(--sws-gotop-svg-max-width);
     }
 
     .gotop svg polyline {

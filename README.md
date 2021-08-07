@@ -36,6 +36,7 @@ sws-gotop {
   --sws-gotop-arrow-weight: 2px;
   --sws-gotop-arrow-scale: 1;
   --sws-gotop-pointer-focus-outline-width: 0;
+  --sws-gotop-svg-max-width: 100%;
 }
 ```
 
@@ -60,6 +61,7 @@ sws-gotop {
 | `--sws-gotop-arrow-weight`                | Thickness of the arrow                     | `2px`                            |
 | `--sws-gotop-arrow-scale`                 | Scale size of the arrow                    | `1`                              |
 | `--sws-gotop-pointer-focus-outline-width` | Mouse pointer Fouced outline width         | `0`                              |
+| `--sws-gotop-svg-max-width`               | Arrow svg image max width                  | `100%`                           |
 
 ## Options
 
