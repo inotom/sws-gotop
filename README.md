@@ -12,7 +12,7 @@ Place `sws-gotop` custom element.
 
 ```html
 <sws-gotop></sws-gotop>
-<script type="module" src="sws-gotop.min.js"></script>
+<script type="module" src="sws-gotop.min.js" defer></script>
 ```
 
 Set element's style etc... by css custom properties.
