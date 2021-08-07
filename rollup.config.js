@@ -6,7 +6,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import html2 from 'rollup-plugin-html2';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
-//import buble from '@rollup/plugin-buble';
 import { terser } from 'rollup-plugin-terser';
 
 import camelCase from 'lodash.camelcase';
@@ -23,20 +22,12 @@ const banner = `/*! ${unscopedName}.js v${pkg.version} ${pkg.author} | ${pkg.lic
 
 const plugins = [
   resolve(),
-  typescript({ include: '**/*.{ts,js}' }),
+  // `check: false` for fixing (plugin rpt2) Error: Could not find source file lit-element/lib/updating-element.js
+  // https://github.com/ezolenko/rollup-plugin-typescript2/issues/214
+  typescript({ include: '**/*.{ts,js}', check: false }),
   commonjs({ extensions: ['.ts', '.js'] }),
 ];
-let pluginsBrowser = [
-  ...plugins,
-  //buble({
-  //  transforms: {
-  //    templateString: true,
-  //    //forOf: false,
-  //    dangerousForOf: true,
-  //  },
-  //}),
-  html2({ template: 'src/html/index.html' }),
-];
+let pluginsBrowser = [...plugins, html2({ template: 'src/html/index.html' })];
 
 if (process.env.NODE_ENV === 'development') {
   pluginsBrowser = [
