@@ -70,6 +70,7 @@ class SwsGotop extends LitElement {
       --sws-gotop-arrow-scale: 1;
       --sws-gotop-pointer-focus-outline-width: 0;
       --sws-gotop-svg-max-width: 100%;
+      --sws-gotop-image-object-fit: cover;
     }
 
     .gotop {
@@ -116,7 +117,7 @@ class SwsGotop extends LitElement {
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: var(--sws-gotop-image-object-fit);
     }
 
     .gotop[aria-hidden='true'] {
