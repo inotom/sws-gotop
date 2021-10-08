@@ -32,6 +32,7 @@ sws-gotop {
   --sws-gotop-border: 0 none;
   --sws-gotop-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   --sws-gotop-ripple-color: rgba(255, 255, 255, 0.5);
+  --sws-gotop-ripple-border-radius: 50%;
   --sws-gotop-arrow-color: #fff;
   --sws-gotop-arrow-weight: 2px;
   --sws-gotop-arrow-scale: 1;
@@ -57,6 +58,7 @@ sws-gotop {
 | `--sws-gotop-border`                      | Border style                               | `0 none`                         |
 | `--sws-gotop-shadow`                      | Button shadow style                        | `2px 2px 5px rgba(0, 0, 0, 0.2)` |
 | `--sws-gotop-ripple-color`                | Ripple effect color                        | `rgba(255, 255, 255, 0.5)`       |
+| `--sws-gotop-ripple-border-radius`        | Ripple border radius size                  | `50%`                            |
 | `--sws-gotop-arrow-color`                 | Arrow color                                | `#fff`                           |
 | `--sws-gotop-arrow-weight`                | Thickness of the arrow                     | `2px`                            |
 | `--sws-gotop-arrow-scale`                 | Scale size of the arrow                    | `1`                              |

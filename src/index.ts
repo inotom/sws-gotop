@@ -64,6 +64,7 @@ class SwsGotop extends LitElement {
       --sws-gotop-border: 0 none;
       --sws-gotop-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
       --sws-gotop-ripple-color: rgba(255, 255, 255, 0.5);
+      --sws-gotop-ripple-border-radius: 50%;
       --sws-gotop-arrow-color: #fff;
       --sws-gotop-arrow-weight: 2px;
       --sws-gotop-arrow-scale: 1;
@@ -129,7 +130,7 @@ class SwsGotop extends LitElement {
       width: 200%;
       height: 200%;
       background-color: var(--sws-gotop-ripple-color);
-      border-radius: var(--sws-gotop-border-radius);
+      border-radius: var(--sws-gotop-ripple-border-radius);
       transform: scale(0);
       opacity: 0;
       pointer-events: none;
