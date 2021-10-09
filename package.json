@@ -1,6 +1,6 @@
 {
   "name": "@inotom/sws-gotop",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@inotom/smoothscroll": "2.1.0",
-    "lit-element": "3.0.1",
+    "lit": "2.0.2",
     "throttle-debounce": "3.0.1",
     "tslib": "2.1.0"
   }
