@@ -79,13 +79,14 @@ sws-gotop {
 ></sws-gotop>
 ```
 
-| option name | content                          | defaults             |
-|:------------|:---------------------------------|:---------------------|
-| `boundary`  | Scroll position to start display | `200`                |
-| `src`       | Image path                       | `''`                 |
-| `media`     | Mobile device judgment width     | `(max-width: 768px)` |
-| `label`     | `aria-label` text                | `''`                 |
-| `index`     | `tabindex` value                 | `0`                  |
+| option name | content                           | defaults             |
+|:------------|:----------------------------------|:---------------------|
+| `boundary`  | Scroll position to start display  | `200`                |
+| `src`       | Image path                        | `''`                 |
+| `media`     | Mobile device judgment width      | `(max-width: 768px)` |
+| `label`     | `aria-label` text                 | `''`                 |
+| `index`     | `tabindex` value                  | `0`                  |
+| `mode`      | Select inner content, svg or slot | `svg`                |
 
 ## License
 

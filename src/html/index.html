@@ -18,6 +18,27 @@
   --sws-gotop-size: 60px;
   --sws-gotop-right: 350px;
 }
+.slot-gotop {
+  --sws-gotop-bg-color: transparent;
+  --sws-gotop-border: 1px solid #00f;
+  --sws-gotop-border-radius: 0;
+  --sws-gotop-size: 60px;
+  --sws-gotop-right: 300px;
+  --sws-gotop-bottom: 200px;
+}
+.slot-gotop__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--sws-gotop-size);
+  height: var(--sws-gotop-size);
+  color: #00f;
+  background-color: #fff;
+}
+.slot-gotop__content:hover {
+  color: #fff;
+  background-color: #00f;
+}
 @media screen and (max-width: 768px) {
   .img-gotop {
     --sws-gotop-right: 10vw;
@@ -102,5 +123,10 @@
   <sws-gotop></sws-gotop>
   <sws-gotop class="my-gotop" boundary="500" media="(max-width: 1px)" label="ページトップへ移動" index="-1"></sws-gotop>
   <sws-gotop class="img-gotop" src="https://sandbox.serendip.ws/arrow.svg" media="(max-width: 1px)"></sws-gotop>
+  <sws-gotop class="slot-gotop" mode="slot">
+    <div class="slot-gotop__content">
+      TOP
+    </div>
+  </sws-gotop>
 </body>
 </html>

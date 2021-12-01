@@ -168,21 +168,12 @@ class SwsGotop extends LitElement {
   @property({ type: Number })
   index = 0;
 
+  @property({ type: String })
+  mode = 'svg';
+
   render() {
     const imgHtml =
-      this.src.length > 0
-        ? html`<img src="${this.src}" alt="" />`
-        : html`
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              width="60px"
-              height="40px"
-              viewBox="0 0 60 40"
-            >
-              <polyline points="10,30, 30,10, 50,30" />
-            </svg>
-          `;
+      this.src.length > 0 ? html`<img src="${this.src}" alt="" />` : this._getInnerContent();
     return html`
       <button
         class="gotop"
@@ -247,6 +238,25 @@ class SwsGotop extends LitElement {
       window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     scrollTo(from, 0);
     elGotop.setAttribute('is-moving', '');
+  }
+
+  private _getInnerContent() {
+    switch (this.mode) {
+      case 'svg':
+        return html`
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="60px"
+            height="40px"
+            viewBox="0 0 60 40"
+          >
+            <polyline points="10,30, 30,10, 50,30" />
+          </svg>
+        `;
+      case 'slot':
+        return html`<slot />`;
+    }
   }
 }
 
