@@ -202,8 +202,8 @@ class SwsGotop extends LitElement {
       });
     };
 
-    window.addEventListener('scroll', throttle(200, false, scrollAnimationFrame));
-    window.addEventListener('resize', throttle(200, false, scrollAnimationFrame));
+    window.addEventListener('scroll', throttle(200, scrollAnimationFrame));
+    window.addEventListener('resize', throttle(200, scrollAnimationFrame));
 
     updateGotop(elGotop, this.boundary, this.media);
   }
