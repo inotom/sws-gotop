@@ -39,6 +39,16 @@
   color: #fff;
   background-color: #00f;
 }
+.rectangle-gotop {
+  --sws-gotop-size: 60px;
+  --sws-gotop-aspect-ratio: 1 / 2;
+  --sws-gotop-bg-color: #393;
+  --sws-gotop-bottom: 200px;
+  --sws-gotop-right: 150px;
+  --sws-gotop-border-radius: 10px;
+  --sws-gotop-arrow-weight: 5px;
+  --sws-gotop-arrow-scale: .7;
+}
 @media screen and (max-width: 768px) {
   .img-gotop {
     --sws-gotop-right: 10vw;
@@ -128,5 +138,6 @@
       TOP
     </div>
   </sws-gotop>
+  <sws-gotop class="rectangle-gotop"></sws-gotop>
 </body>
 </html>
