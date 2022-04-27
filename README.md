@@ -20,6 +20,7 @@ Set element's style etc... by css custom properties.
 ```css
 sws-gotop {
   --sws-gotop-size: 80px;
+  --sws-gotop-aspect-ratio: 1;
   --sws-gotop-right: 50px;
   --sws-gotop-bottom: 100px;
   --sws-gotop-z-index: 1000;
@@ -46,7 +47,8 @@ sws-gotop {
 
 | css custom property name                  | content                                    |  defaults                        |
 |:------------------------------------------|:-------------------------------------------|:---------------------------------|
-| `--sws-gotop-size`                        | Vartical and horizontal size               | `80px`                           |
+| `--sws-gotop-size`                        | Horizontal size (width)                    | `80px`                           |
+| `--sws-gotop-aspect-ratio`                | Aspect ratio size                          | `1`                              |
 | `--sws-gotop-right`                       | Position from the right edge of the window | `50px`                           |
 | `--sws-gotop-bottom`                      | Position from the bottom of window         | `100px`                          |
 | `--sws-gotop-z-index`                     | Value of z-index                           | `1000`                           |

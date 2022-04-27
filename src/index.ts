@@ -53,6 +53,7 @@ class SwsGotop extends LitElement {
   static styles = css`
     :host {
       --sws-gotop-size: 80px;
+      --sws-gotop-aspect-ratio: 1;
       --sws-gotop-right: 50px;
       --sws-gotop-bottom: 100px;
       --sws-gotop-z-index: 1000;
@@ -81,7 +82,7 @@ class SwsGotop extends LitElement {
       bottom: var(--sws-gotop-bottom);
       z-index: var(--sws-gotop-z-index);
       width: var(--sws-gotop-size);
-      height: var(--sws-gotop-size);
+      aspect-ratio: var(--sws-gotop-aspect-ratio);
       padding: 0;
       color: var(--sws-gotop-fg-color);
       background-color: var(--sws-gotop-bg-color);
@@ -129,8 +130,8 @@ class SwsGotop extends LitElement {
 
     .gotop__ripple {
       position: absolute;
-      width: 200%;
-      height: 200%;
+      width: calc(var(--sws-gotop-size) * 2);
+      aspect-ratio: var(--sws-gotop-aspect-ratio);
       background-color: var(--sws-gotop-ripple-color);
       border-radius: var(--sws-gotop-ripple-border-radius);
       transform: scale(0);
@@ -221,12 +222,13 @@ class SwsGotop extends LitElement {
     }
 
     const rectRoot = elGotop.getBoundingClientRect();
-    const size = rectRoot.width;
+    const width = rectRoot.width;
+    const height = rectRoot.height;
 
     const { rippleTop, rippleLeft } = getRippleStartPosition(e);
 
-    elRipple.style.top = rippleTop - size + 'px';
-    elRipple.style.left = rippleLeft - size + 'px';
+    elRipple.style.top = rippleTop - height + 'px';
+    elRipple.style.left = rippleLeft - width + 'px';
 
     elRipple.setAttribute('is-active', '');
 
