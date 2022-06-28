@@ -52,8 +52,11 @@ const updateGotop = (
 class SwsGotop extends LitElement {
   static styles = css`
     :host {
+      --sws-gotop-position: fixed;
       --sws-gotop-size: 80px;
       --sws-gotop-aspect-ratio: 1;
+      --sws-gotop-top: initial;
+      --sws-gotop-left: initial;
       --sws-gotop-right: 50px;
       --sws-gotop-bottom: 100px;
       --sws-gotop-z-index: 1000;
@@ -77,7 +80,9 @@ class SwsGotop extends LitElement {
 
     .gotop {
       overflow: hidden;
-      position: fixed;
+      position: var(--sws-gotop-position);
+      top: var(--sws-gotop-top);
+      left: var(--sws-gotop-left);
       right: var(--sws-gotop-right);
       bottom: var(--sws-gotop-bottom);
       z-index: var(--sws-gotop-z-index);

@@ -5,6 +5,9 @@
 <script src="https://polyfill.io/v3/polyfill.min.js"></script>
 <title>sws-gotop demo</title>
 <style>
+body {
+  margin: 0;
+}
 .my-gotop {
   --sws-gotop-size: 60px;
   --sws-gotop-bg-color: #339;
@@ -48,6 +51,20 @@
   --sws-gotop-border-radius: 10px;
   --sws-gotop-arrow-weight: 5px;
   --sws-gotop-arrow-scale: .7;
+}
+
+.sticky-gotop {
+  --sws-gotop-position: sticky;
+  --sws-gotop-left: 10%;
+  --sws-gotop-right: initial;
+  --sws-gotop-bottom: 50px;
+}
+
+.site-footer {
+  height: 300px;
+  margin-top: -40px;
+  background-color: #bbd;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .img-gotop {
@@ -129,6 +146,14 @@
     </p>
 
   </div>
+
+  <sws-gotop class="sticky-gotop"></sws-gotop>
+
+  <footer class="site-footer">
+    <small>
+      Copyright (c) Serendip
+    </small>
+  </footer>
 
   <sws-gotop></sws-gotop>
   <sws-gotop class="my-gotop" boundary="500" media="(max-width: 1px)" label="ページトップへ移動" index="-1"></sws-gotop>
